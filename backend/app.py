@@ -2,8 +2,10 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pickle
 import re
-from nltk.corpus import stopwords
+import os
+import sys
 import nltk
+from nltk.corpus import stopwords
 
 nltk.download('stopwords', quiet=True)
 
