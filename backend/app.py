@@ -10,10 +10,13 @@ nltk.download('stopwords', quiet=True)
 app = Flask(__name__)
 CORS(app)
 
-with open('../model/model.pkl', 'rb') as f:
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_DIR = os.path.join(BASE_DIR, '..', 'model')
+
+with open(os.path.join(MODEL_DIR, 'model.pkl'), 'rb') as f:
     model = pickle.load(f)
 
-with open('../model/vectorizer.pkl', 'rb') as f:
+with open(os.path.join(MODEL_DIR, 'vectorizer.pkl'), 'rb') as f:
     vectorizer = pickle.load(f)
 
 stop_words = set(stopwords.words('english'))
