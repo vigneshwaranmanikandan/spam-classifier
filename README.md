@@ -3,7 +3,7 @@
 A machine learning web app that detects spam messages with 97.5% accuracy.
 
 ## Live Demo
-[Try it here](YOUR VERCEL LINK)
+https://spam-classifier-rho.vercel.app/
 
 ## Tech Stack
 - Python, scikit-learn, TF-IDF, Logistic Regression
